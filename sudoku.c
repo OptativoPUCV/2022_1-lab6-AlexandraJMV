@@ -51,6 +51,30 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
     List* list=createList();
+	/*
+	cambiar valor de la primera casillla vacia 
+	:::: for i in k, for o in k, sea k la dimension del sudoku (3*3)
+	if casilla vacia, llenar con numero (uno al nueve)
+	CASILLA VACIA :::: 0
+
+	Ciclo para la creacion de nodos.... 
+	como existen 9 casos posibles, nueve numeros. un ciclo que vaya del 0 al 9
+	copiar nodo, buscar casilla vacia, insertar numero, agregar a lista el nuevo nodo.
+
+	alternativa,emte, lo PRIMERO QUE SE HACE es buscar lña casilla vacia para insertar el valor.
+con el ciclo se copian los nodos para agregarlños a la lista ista. :3
+	*/
+	if (n == NULL) return NULL;
+	
+	int i, j;
+	for(i=0 ; i<3 ; i++)
+		for(j=0 ; j<3 ; j++)
+			if(n->sudo[i][j] == 0)
+				break;
+
+	printf("%d %d", i, j);
+	
+	
     return list;
 }
 
