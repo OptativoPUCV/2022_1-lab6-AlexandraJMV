@@ -44,7 +44,31 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
+	/*
+	No se repitan números en las filas
+	No se repitan números en las columnas
+	No se repitan números en las submatrices de 3x3
+	*/
 
+	
+	int marked_f[10] = [0,0,0,0,0,0,0,0,0,0];
+	int marked_c[10] = [0,0,0,0,0,0,0,0,0,0];
+
+	//RECORRER FILA Y COLUMNA
+	for(int k = 1 ; k<=9 ; k++)
+		for(int i = 0 ; i<9 ; i++)
+			for(int j = 0 ; j<9 ; j++)
+			{
+				if(n->sudo[i][j]==k)
+				{
+					marked_f[k-1] = 1;
+				}
+				if(n->sudo[j][i]==k)
+				{
+					marked_c[k-1] = 1;
+				}
+			}
+		
     return 1;
 }
 
@@ -59,8 +83,8 @@ List* get_adj_nodes(Node* n){
 	{
 		int comp = 0;
 		Node * cpy_node = copy(n);
-		for(i=0 ; i<3 ; i++)
-			for(j=0 ; j<3 ; j++)
+		for(i=0 ; i<9 ; i++)
+			for(j=0 ; j<9 ; j++)
 				if(cpy_node->sudo[i][j] == 0)
 				{
 					cpy_node->sudo[i][j] = k;
