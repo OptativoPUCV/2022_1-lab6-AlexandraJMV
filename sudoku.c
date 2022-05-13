@@ -67,14 +67,16 @@ con el ciclo se copian los nodos para agregarlños a la lista ista. :3
 	if (n == NULL) return NULL;
 	
 	int i, j;
-	for(i=0 ; i<3 ; i++)
-		for(j=0 ; j<3 ; j++)
-			if(n->sudo[i][j] == 0)
-				break;
-
 	for(int k = 1 ; k<=9 ; k++)
 	{
 		Node * cpy_node = copy(n);
+		for(i=0 ; i<3 ; i++)
+			for(j=0 ; j<3 ; j++)
+				if(cpy_node->sudo[i][j] == 0)
+				{
+					cpy_node->sudo[i][j] = k;
+					break;
+				}
 		cpy_node->sudo[i][j] = k;
 		pushBack(list, cpy_node);
 	}
