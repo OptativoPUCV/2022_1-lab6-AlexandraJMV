@@ -72,8 +72,12 @@ con el ciclo se copian los nodos para agregarlños a la lista ista. :3
 			if(n->sudo[i][j] == 0)
 				break;
 
-	printf("%d %d", i, j);
-	
+	for(int k = 1 ; k<=9 ; k++)
+	{
+		Node * cpy_node = copy(n);
+		cpy_node->sudo[i][j] = k;
+		pushBack(list, cpy_node);
+	}
 	
     return list;
 }
@@ -89,7 +93,7 @@ Node* DFS(Node* initial, int* cont){
 
 
 
-/*
+
 int main( int argc, char *argv[] ){
 
   Node* initial= read_file("s12a.txt");;
@@ -100,4 +104,4 @@ int main( int argc, char *argv[] ){
   print_node(final);
 
   return 0;
-}*/
+}
