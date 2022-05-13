@@ -68,11 +68,8 @@ List* get_adj_nodes(Node* n){
 					break;
 				}
 		if(comp==1)
-		{
 			pushBack(list, cpy_node);
-		}
 	}
-	
     return list;
 }
 
