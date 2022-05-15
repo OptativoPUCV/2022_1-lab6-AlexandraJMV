@@ -102,6 +102,7 @@ List* get_adj_nodes(Node* n){
 	int i, j;
 	for(int k = 1 ; k<=9 ; k++)
 	{
+		int comp = 0;
 		Node * cpy_node = copy(n);
 		for(i=0 ; i<9 ; i++)
 			for(j=0 ; j<9 ; j++)
@@ -110,7 +111,7 @@ List* get_adj_nodes(Node* n){
 					cpy_node->sudo[i][j] = k;
 					break;
 				}
-		if(is_valid(cpy_node)==1)
+		if(comp==1 && is_valid(cpy_node)==1)
 			pushBack(list, cpy_node);
 	}
     return list;
