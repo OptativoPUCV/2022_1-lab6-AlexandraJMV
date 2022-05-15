@@ -270,3 +270,17 @@ Sun May 15 21:24:37 UTC 2022:
  tests:  2|4
 total_score: 15/70
 facfc41
+Sun May 15 21:26:23 UTC 2022: 
+ sudoku.c | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:94:9: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+    else if (marked_sm[(n->sudo[i][j])-1] == 1)
+         ^~
+sudoku.c:95:11: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+     break;return 0;
+           ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9e8d947

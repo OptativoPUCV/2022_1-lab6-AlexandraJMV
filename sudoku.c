@@ -56,12 +56,12 @@ int is_valid(Node* n){
 				if(marked_f[n->sudo[i][j]-1] == 0)
 					marked_f[n->sudo[i][j]-1] = 1;
 				else if (marked_f[n->sudo[i][j]-1] == 1)
-					return 0;
+					break;//return 0;
 
 				if(marked_c[n->sudo[j][i]-1] == 0)
 					marked_f[n->sudo[j][i]-1] = 1;
 				else if (marked_c[n->sudo[j][i]-1] == 1)
-					return 0;
+					break;//return 0;
 			}
 
 	/*
@@ -92,9 +92,15 @@ int is_valid(Node* n){
 			if(marked_sm[(n->sudo[i][j])-1]==0)
 				marked_sm[(n->sudo[i][j])-1] = 1;
 			else if (marked_sm[(n->sudo[i][j])-1] == 1)
-				return 0;
+				break;return 0;
 		}		
 	}
+
+	printf("marked f\n ");
+	
+	for(int i=0 ; i<9 ; i++)
+		printf(" %d", marked_f[i]);
+	printf("\n");
     return 1;
 }
 
