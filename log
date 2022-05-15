@@ -126,3 +126,77 @@ Fri May 13 16:05:13 UTC 2022:
  tests:  2|4
 total_score: 15/70
 9d94830
+Sun May 15 20:43:50 UTC 2022: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:48:2: error: unknown type name ‘No’; did you mean ‘Node’?
+  No se repitan números en las filas
+  ^~
+  Node
+sudoku.c:48:8: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘repitan’
+  No se repitan números en las filas
+        ^~~~~~~
+sudoku.c:48:17: error: stray ‘\303’ in program
+  No se repitan números en las filas
+                 ^
+sudoku.c:48:18: error: stray ‘\272’ in program
+  No se repitan números en las filas
+                  ^
+sudoku.c:49:17: error: stray ‘\303’ in program
+  No se repitan números en las columnas
+                 ^
+sudoku.c:49:18: error: stray ‘\272’ in program
+  No se repitan números en las columnas
+                  ^
+sudoku.c:50:17: error: stray ‘\303’ in program
+  No se repitan números en las submatrices de 3x3
+                 ^
+sudoku.c:50:18: error: stray ‘\272’ in program
+  No se repitan números en las submatrices de 3x3
+                  ^
+sudoku.c:50:47: error: invalid suffix "x3" on integer constant
+  No se repitan números en las submatrices de 3x3
+                                               ^~~
+sudoku.c:55:21: error: expected expression before ‘[’ token
+  int marked_c[10] = [0,0,0,0,0,0,0,0,0,0];
+                     ^
+sudoku.c:55:23: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  int marked_c[10] = [0,0,0,0,0,0,0,0,0,0];
+                       ^
+sudoku.c:55:25: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  int marked_c[10] = [0,0,0,0,0,0,0,0,0,0];
+                         ^
+sudoku.c:55:27: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  int marked_c[10] = [0,0,0,0,0,0,0,0,0,0];
+                           ^
+sudoku.c:55:29: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  int marked_c[10] = [0,0,0,0,0,0,0,0,0,0];
+                             ^
+sudoku.c:55:31: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  int marked_c[10] = [0,0,0,0,0,0,0,0,0,0];
+                               ^
+sudoku.c:55:33: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  int marked_c[10] = [0,0,0,0,0,0,0,0,0,0];
+                                 ^
+sudoku.c:55:35: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  int marked_c[10] = [0,0,0,0,0,0,0,0,0,0];
+                                   ^
+sudoku.c:55:37: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  int marked_c[10] = [0,0,0,0,0,0,0,0,0,0];
+                                     ^
+sudoku.c:55:39: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+  int marked_c[10] = [0,0,0,0,0,0,0,0,0,0];
+                                       ^
+sudoku.c:64:6: error: ‘marked_f’ undeclared (first use in this function); did you mean ‘marked_c’?
+      marked_f[k-1] = 1;
+      ^~~~~~~~
+      marked_c
+sudoku.c:64:6: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:55:6: error: variable ‘marked_c’ set but not used [-Werror=unused-but-set-variable]
+  int marked_c[10] = [0,0,0,0,0,0,0,0,0,0];
+      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8ce36d7
