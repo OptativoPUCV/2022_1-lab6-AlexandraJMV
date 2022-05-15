@@ -109,6 +109,7 @@ List* get_adj_nodes(Node* n){
 				if(cpy_node->sudo[i][j] == 0)
 				{
 					cpy_node->sudo[i][j] = k;
+					comp=1;
 					break;
 				}
 		if(comp==1)
