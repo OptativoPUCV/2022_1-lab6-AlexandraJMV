@@ -82,9 +82,9 @@ int is_valid(Node* n){
                 
             if(n->sudo[i][j] != 0)
 			{
-                if(marked_sm[(n->sudo[i][j])-1]==0)
-                    marked_sm[(n->sudo[i][j])-1] = 1;
-                else if (marked_sm[(n->sudo[i][j])-1] == 1)
+                if(marked_sm[(n->sudo[i][j])]==0)
+                    marked_sm[(n->sudo[i][j])] = 1;
+                else if (marked_sm[(n->sudo[i][j])] == 1)
                         return 0;
 			}
 		}		
