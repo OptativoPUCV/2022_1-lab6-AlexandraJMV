@@ -110,6 +110,7 @@ List* get_adj_nodes(Node* n){
 				{
 					cpy_node->sudo[i][j] = k;
 					comp=1;
+					printf("%d %d", i, j);
 					break;
 				}
 		if(comp==1)
