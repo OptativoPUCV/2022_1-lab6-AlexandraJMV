@@ -45,13 +45,13 @@ void print_node(Node* n){
 
 
 int is_valid(Node* n){
-	
-	int marked_f[10] = {0,0,0,0,0,0,0,0,0,0};
-	int marked_c[10] = {0,0,0,0,0,0,0,0,0,0};
-	int marked_sm[10] = {0,0,0,0,0,0,0,0,0,0};
 
 	//RECORRER FILA Y COLUMNA
 	for(int i = 0 ; i<9 ; i++)
+	{
+		int marked_f[10] = {0,0,0,0,0,0,0,0,0,0};
+		int marked_c[10] = {0,0,0,0,0,0,0,0,0,0};
+		
 		for(int j = 0 ; j<9 ; j++)
 		{
         
@@ -71,9 +71,11 @@ int is_valid(Node* n){
 					return 0;
                 }
 			}
+	}
 
 	for(int k = 0; k<9 ; k++)
 	{
+		int marked_sm[10] = {0,0,0,0,0,0,0,0,0,0};
 		for(int p=0;p<9;p++)
 		{
 		    int i=3*(k/3) + (p/3) ;
