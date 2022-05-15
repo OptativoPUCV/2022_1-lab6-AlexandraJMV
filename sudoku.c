@@ -53,14 +53,14 @@ int is_valid(Node* n){
 	for(int i = 0 ; i<9 ; i++)
 		for(int j = 0 ; j<9 ; j++)
 			{
-				if(marked_f[n->sudo[i][j]] == 0)
-					marked_f[n->sudo[i][j]] = 1;
-				else if (marked_f[n->sudo[i][j]] == 1)
+				if(marked_f[n->sudo[i][j]-1] == 0)
+					marked_f[n->sudo[i][j]-1] = 1;
+				else if (marked_f[n->sudo[i][j]-1] == 1)
 					return 0;
 
-				if(marked_c[n->sudo[j][i]] == 0)
-					marked_f[n->sudo[j][i]] = 1;
-				else if (marked_c[n->sudo[j][i]] == 1)
+				if(marked_c[n->sudo[j][i]-1] == 0)
+					marked_f[n->sudo[j][i]-1] = 1;
+				else if (marked_c[n->sudo[j][i]-1] == 1)
 					return 0;
 			}
 
@@ -89,13 +89,12 @@ int is_valid(Node* n){
 		    int i=3*(k/3) + (p/3) ;
 		    int j=3*(k%3) + (p%3) ;
 
-			if(marked_sm[n->sudo[i][j]]==0)
-				marked_sm[n->sudo[i][j]]=1;
-			else if (marked_sm[n->sudo[i][j]]==1)
+			if(marked_sm[(n->sudo[i][j])-1]==0)
+				marked_sm[(n->sudo[i][j])-1] = 1;
+			else if (marked_sm[(n->sudo[i][j])-1] == 1)
 				return 0;
 		}		
 	}
-	
     return 1;
 }
 
