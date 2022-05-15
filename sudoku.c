@@ -112,26 +112,15 @@ List* get_adj_nodes(Node* n){
 			}
 		if(comp==1) break;
 	}
-				
-	printf("%d %d", l, m);
-
-	/*
-	for(int k = 1 ; k<= 9 ; k++)
-	{
-		int comp = 0;
-		Node * cpy_node = copy(n);
-		for(i=0 ; i<9 ; i++)
-			for(j=0 ; j<9 ; j++)
-				if(n->sudo[i][j] == 0)
-				{
-					cpy_node->sudo[i][j] = k;
-					comp=1;
-					
-					break;
-				}
-		if(comp==1)
+			
+	if(comp!=0)
+		for(int k = 1 ; k<= 9 ; k++)
+		{
+			Node * cpy_node = copy(n);
+			cpy_node->sudo[l][m] = k;
 			pushBack(list, cpy_node);
-	}*/
+		}
+	
     return list;
 }
 
