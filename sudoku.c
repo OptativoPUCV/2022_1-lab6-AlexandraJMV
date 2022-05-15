@@ -156,6 +156,7 @@ Node* DFS(Node* initial, int* cont){
 			push(stc, reclist);
 			reclist = (Node *) next(adj);
 		}
+		free(nod);
 	}
   	return NULL;
 }
