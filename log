@@ -244,3 +244,17 @@ sudoku.c:55:6: error: variable ‘marked_c’ set but not used [-Werror=unused-b
 cc1: all warnings being treated as errors
 Compilation failed
 01ff153
+Sun May 15 20:45:00 UTC 2022: 
+ sudoku.c | 6 ------
+ 1 file changed, 6 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:49:6: error: variable ‘marked_c’ set but not used [-Werror=unused-but-set-variable]
+  int marked_c[10] = {0,0,0,0,0,0,0,0,0,0};
+      ^~~~~~~~
+sudoku.c:48:6: error: variable ‘marked_f’ set but not used [-Werror=unused-but-set-variable]
+  int marked_f[10] = {0,0,0,0,0,0,0,0,0,0};
+      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8ca3cc7
