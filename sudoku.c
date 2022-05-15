@@ -109,10 +109,9 @@ List* get_adj_nodes(Node* n){
 				if(cpy_node->sudo[i][j] == 0)
 				{
 					cpy_node->sudo[i][j] = k;
-					comp=1;
 					break;
 				}
-		if(comp==1 && is_valid(cpy_node)==1)
+		if(is_valid(cpy_node)==1)
 			pushBack(list, cpy_node);
 	}
     return list;
@@ -120,6 +119,7 @@ List* get_adj_nodes(Node* n){
 
 
 int is_final(Node* n){
+	
     return 0;
 }
 
