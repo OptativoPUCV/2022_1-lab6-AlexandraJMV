@@ -409,3 +409,17 @@ Sun May 15 22:41:37 UTC 2022:
  tests:  5|3
 total_score: 35/70
 0b156a9
+Sun May 15 22:42:16 UTC 2022: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:121:4: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+    if(is_valid(cpy_node));
+    ^~
+sudoku.c:122:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+     pushBack(list, cpy_node);
+     ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+68260df
