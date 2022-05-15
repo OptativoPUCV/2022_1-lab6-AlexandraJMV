@@ -258,3 +258,9 @@ sudoku.c:48:6: error: variable ‘marked_f’ set but not used [-Werror=unused-b
 cc1: all warnings being treated as errors
 Compilation failed
 8ca3cc7
+Sun May 15 21:21:44 UTC 2022: 
+ sudoku.c | 33 +++++++++++++++++++++++++++++++++
+ 1 file changed, 33 insertions(+)
+ tests:  2|4
+total_score: 15/70
+300f722
