@@ -99,15 +99,19 @@ List* get_adj_nodes(Node* n){
 
 	if (n == NULL) return NULL;
 
-	int l = 0, m = 0;
+	int l = 0, m = 0, comp = 0;
 	for(int i=0 ; i<9 ; i++)
+	{
 		for(int j=0 ; j<9 ; j++)
-			if (n->sudo[i][j]==0)
+			if (n->sudo[i][j] == 0)
 			{
 				l = i;
 				m = j;
+				comp = 1;
 				break;
 			}
+		if(comp==1) break;
+	}
 				
 	printf("%d %d", l, m);
 
