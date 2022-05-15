@@ -66,13 +66,12 @@ int is_valid(Node* n){
             if (n->sudo[j][i] != 0)
             {
 				if(marked_c[n->sudo[j][i]] == 0)
-					marked_f[n->sudo[j][i]] = 1;
+					marked_c[n->sudo[j][i]] = 1;
 				else if (marked_c[n->sudo[j][i]] == 1)
 					return 0;
                 }
 			}
 
-   
 	for(int k = 0; k<9 ; k++)
 	{
 		for(int p=0;p<9;p++)
