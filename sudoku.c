@@ -86,7 +86,7 @@ int is_valid(Node* n){
                 if(marked_sm[(n->sudo[i][j])]==0)
                     marked_sm[(n->sudo[i][j])] = 1;
                 else if (marked_sm[(n->sudo[i][j])] == 1)
-                        return 0;
+                    return 0;
 			}
 		}		
 	}
@@ -112,7 +112,7 @@ List* get_adj_nodes(Node* n){
 					comp=1;
 					break;
 				}
-		if(comp==1)
+		if(comp)
 			pushBack(list, cpy_node);
 	}
     return list;
