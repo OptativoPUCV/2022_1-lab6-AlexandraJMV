@@ -355,3 +355,9 @@ sudoku.c:105:7: error: unused variable ‘comp’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 601ad30
+Sun May 15 22:25:40 UTC 2022: 
+ sudoku.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  3|4
+total_score: 20/70
+5445c52

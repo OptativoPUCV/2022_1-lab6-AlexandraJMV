@@ -102,7 +102,6 @@ List* get_adj_nodes(Node* n){
 	int i, j;
 	for(int k = 1 ; k<=9 ; k++)
 	{
-		int comp = 0;
 		Node * cpy_node = copy(n);
 		for(i=0 ; i<9 ; i++)
 			for(j=0 ; j<9 ; j++)
