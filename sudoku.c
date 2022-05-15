@@ -43,6 +43,7 @@ void print_node(Node* n){
     printf("\n");
 }
 
+
 int is_valid(Node* n){
 	
 	int marked_f[10] = {0,0,0,0,0,0,0,0,0,0};
@@ -52,55 +53,42 @@ int is_valid(Node* n){
 	//RECORRER FILA Y COLUMNA
 	for(int i = 0 ; i<9 ; i++)
 		for(int j = 0 ; j<9 ; j++)
-			{
-				if(marked_f[n->sudo[i][j]-1] == 0)
-					marked_f[n->sudo[i][j]-1] = 1;
-				else if (marked_f[n->sudo[i][j]-1] == 1)
-					break;//return 0;
-
-				if(marked_c[n->sudo[j][i]-1] == 0)
-					marked_f[n->sudo[j][i]-1] = 1;
-				else if (marked_c[n->sudo[j][i]-1] == 1)
-					break;//return 0;
+		{
+        
+            if (n->sudo[i][j] != 0)
+            {
+                if(marked_f[n->sudo[i][j]] == 0)
+                    marked_f[n->sudo[i][j]] = 1;        
+                else if (marked_f[n->sudo[i][j]] == 1)
+                    return 0;
+            }
+                
+            if (n->sudo[j][i] != 0)
+            {
+				if(marked_c[n->sudo[j][i]] == 0)
+					marked_f[n->sudo[j][i]] = 1;
+				else if (marked_c[n->sudo[j][i]] == 1)
+					return 0;
+                }
 			}
 
-	/*
-	for(int k = 1 ; k<=9 ; k++)
-		for(int i = 0 ; i<9 ; i++)
-			for(int j = 0 ; j<9 ; j++)
-			{
-				if(n->sudo[i][j]==k)
-				{
-					if(marked_f[k-1] == 1)
-						return 0;
-					marked_f[k-1] = 1;
-				}
-				if(n->sudo[j][i]==k)
-				{
-					if(marked_c[k-1] == 1)
-						return 0;
-					marked_c[k-1] = 1;
-				}
-			}*/
-
+   
 	for(int k = 0; k<9 ; k++)
 	{
-		for(int p=0;p<9;p++){
+		for(int p=0;p<9;p++)
+		{
 		    int i=3*(k/3) + (p/3) ;
 		    int j=3*(k%3) + (p%3) ;
-
-			if(marked_sm[(n->sudo[i][j])-1]==0)
-				marked_sm[(n->sudo[i][j])-1] = 1;
-			else if (marked_sm[(n->sudo[i][j])-1] == 1)
-				break;//return 0;
+                
+            if(n->sudo[i][j] != 0)
+			{
+                if(marked_sm[(n->sudo[i][j])-1]==0)
+                    marked_sm[(n->sudo[i][j])-1] = 1;
+                else if (marked_sm[(n->sudo[i][j])-1] == 1)
+                        return 0;
+			}
 		}		
 	}
-
-	printf("marked f\n ");
-	
-	for(int i=0 ; i<9 ; i++)
-		printf(" %d", marked_f[i]);
-	printf("\n");
     return 1;
 }
 
