@@ -435,3 +435,14 @@ Sun May 15 22:44:27 UTC 2022:
  tests:  7|1
 total_score: 55/70
 9376bb5
+Sun May 15 22:54:47 UTC 2022: 
+ sudoku.c | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+In file included from test.c:5:0:
+sudoku.c: In function ‘DFS’:
+sudoku.c:143:12: error: ‘n’ undeclared (first use in this function)
+  push(stc, n);
+            ^
+sudoku.c:143:12: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+6dbf062

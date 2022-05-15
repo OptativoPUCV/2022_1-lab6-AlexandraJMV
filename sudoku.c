@@ -70,7 +70,9 @@ int is_valid(Node* n){
 				else if (marked_c[n->sudo[j][i]] == 1)
 					return 0;
                 }
-			}
+		}
+
+		
 	}
 
 	for(int k = 0; k<9 ; k++)
@@ -127,6 +129,7 @@ List* get_adj_nodes(Node* n){
 
 
 int is_final(Node* n){
+	if(n==NULL) return 0;
 	for(int i=0 ; i<9 ; i++)
 		for(int k=0 ; k<9 ; k++)
 			if(n->sudo[i][k]==0)
@@ -136,7 +139,25 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
-  return NULL;
+	Stack * stc = createStack();
+	push(stc, n);
+
+	while(top(stc) != NULL){
+		Node * nod =(Node*) top(stc);
+		pop(stc);
+
+		if(is_final(nod)) return nod;
+
+		List * adj = get_adj_nodes(nod);
+
+		Node * reclist = (Node*) first(adj);
+		while(reclist != NULL)
+		{
+			push(stc, reclist);
+			reclist = (Node *) next(adj);
+		}
+	}
+  	return NULL;
 }
 
 
