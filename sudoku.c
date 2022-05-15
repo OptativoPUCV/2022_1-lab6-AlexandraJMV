@@ -112,7 +112,7 @@ List* get_adj_nodes(Node* n){
 					comp=1;
 					break;
 				}
-		if(comp)
+		if(comp && is_valid(cpy_node))
 			pushBack(list, cpy_node);
 	}
     return list;
