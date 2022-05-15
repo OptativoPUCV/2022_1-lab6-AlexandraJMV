@@ -111,7 +111,7 @@ List* get_adj_nodes(Node* n){
 					cpy_node->sudo[i][j] = k;
 					break;
 				}
-		if(comp==1 && is_valid(cpy_node)==1)
+		if(comp==1)
 			pushBack(list, cpy_node);
 	}
     return list;
