@@ -200,3 +200,47 @@ sudoku.c:55:6: error: variable ‘marked_c’ set but not used [-Werror=unused-b
 cc1: all warnings being treated as errors
 Compilation failed
 8ce36d7
+Sun May 15 20:44:29 UTC 2022: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:48:2: error: unknown type name ‘No’; did you mean ‘Node’?
+  No se repitan números en las filas
+  ^~
+  Node
+sudoku.c:48:8: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘repitan’
+  No se repitan números en las filas
+        ^~~~~~~
+sudoku.c:48:17: error: stray ‘\303’ in program
+  No se repitan números en las filas
+                 ^
+sudoku.c:48:18: error: stray ‘\272’ in program
+  No se repitan números en las filas
+                  ^
+sudoku.c:49:17: error: stray ‘\303’ in program
+  No se repitan números en las columnas
+                 ^
+sudoku.c:49:18: error: stray ‘\272’ in program
+  No se repitan números en las columnas
+                  ^
+sudoku.c:50:17: error: stray ‘\303’ in program
+  No se repitan números en las submatrices de 3x3
+                 ^
+sudoku.c:50:18: error: stray ‘\272’ in program
+  No se repitan números en las submatrices de 3x3
+                  ^
+sudoku.c:50:47: error: invalid suffix "x3" on integer constant
+  No se repitan números en las submatrices de 3x3
+                                               ^~~
+sudoku.c:64:6: error: ‘marked_f’ undeclared (first use in this function); did you mean ‘marked_c’?
+      marked_f[k-1] = 1;
+      ^~~~~~~~
+      marked_c
+sudoku.c:64:6: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:55:6: error: variable ‘marked_c’ set but not used [-Werror=unused-but-set-variable]
+  int marked_c[10] = {0,0,0,0,0,0,0,0,0,0};
+      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+01ff153

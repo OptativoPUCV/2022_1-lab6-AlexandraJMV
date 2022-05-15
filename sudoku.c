@@ -51,8 +51,8 @@ int is_valid(Node* n){
 	
 
 	
-	int marked_f[10] = [0,0,0,0,0,0,0,0,0,0];
-	int marked_c[10] = [0,0,0,0,0,0,0,0,0,0];
+	int marked_f[10] = {0,0,0,0,0,0,0,0,0,0};
+	int marked_c[10] = {0,0,0,0,0,0,0,0,0,0};
 
 	//RECORRER FILA Y COLUMNA
 	for(int k = 1 ; k<=9 ; k++)
