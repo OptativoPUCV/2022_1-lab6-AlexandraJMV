@@ -99,8 +99,19 @@ List* get_adj_nodes(Node* n){
 
 	if (n == NULL) return NULL;
 
-	
-	int i, j;
+	int l = 0, m = 0;
+	for(int i=0 ; i<9 ; i++)
+		for(int j=0 ; j<9 ; j++)
+			if (n->sudo[i][j]==0)
+			{
+				l = i;
+				m = j;
+				break;
+			}
+				
+	printf("%d %d", l, m);
+
+	/*
 	for(int k = 1 ; k<= 9 ; k++)
 	{
 		int comp = 0;
@@ -111,12 +122,12 @@ List* get_adj_nodes(Node* n){
 				{
 					cpy_node->sudo[i][j] = k;
 					comp=1;
-					printf("%d %d", i, j);
+					
 					break;
 				}
 		if(comp==1)
 			pushBack(list, cpy_node);
-	}
+	}*/
     return list;
 }
 
